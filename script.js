@@ -2,7 +2,7 @@ var _paq = _paq || [];
 
 PAI(function() {
 	var opt = PAI['getOptions']()['plugins']['piwik'],
-		baseUrl = PAI['normalizeUrl'](opt['baseUrl']);
+		baseUrl = opt['baseUrl'];
 
 	_paq.push(['setSiteId', opt['siteId']]);
 	_paq.push(['setTrackerUrl', baseUrl + 'piwik.php']);
