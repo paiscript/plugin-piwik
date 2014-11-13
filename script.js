@@ -2,7 +2,8 @@ var _paq = _paq || [];
 
 PAI(function() {
 	var opt = PAI['getOptions']()['plugins']['piwik'],
-		baseUrl = opt['baseUrl'];
+		baseUrl = opt['baseUrl'],
+		cdn			= opt['cdn'];
 
 	_paq.push(['setSiteId', opt['siteId']]);
 	_paq.push(['setTrackerUrl', baseUrl + 'piwik.php']);
@@ -12,5 +13,6 @@ PAI(function() {
 		_paq.push(['trackPageView']);
 	});
 
-	PAI['loadScript'](baseUrl + 'piwik.js');
+
+	PAI['loadScript']((cdn ? cdn : baseUrl) + 'piwik.js');
 });
